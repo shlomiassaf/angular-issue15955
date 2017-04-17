@@ -1,0 +1,38 @@
+@mixin mat-radio-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .mat-radio-outer-circle {
+
+    .mat-radio-checked & {
+      border-color: mat-color($primary);
+    }
+
+    .mat-radio-disabled & {
+      border-color: mat-color($foreground, disabled);
+    }
+
+    .mat-radio-checked.mat-radio-disabled & {
+      background-color: mat-color($cisco-grey, 100);
+    }
+  }
+
+  .mat-radio-inner-circle {
+    background-color: mat-color($primary);
+
+    .mat-radio-disabled & {
+      background-color: mat-color($foreground, disabled);
+    }
+  }
+
+  .mat-radio-ripple .mat-ripple-foreground {
+    background-color: mat-color($primary, 0.26);
+
+    .mat-radio-disabled & {
+      background-color: mat-color($foreground, disabled);
+    }
+  }
+}

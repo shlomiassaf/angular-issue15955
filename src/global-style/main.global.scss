@@ -1,0 +1,18 @@
+@import "variables/variables";
+
+
+
+@include mat-core();
+
+@include angular-material-theme($theme);
+
+
+@import 'bootstrap';
+
+@import 'customize/scrollbar';
+@import 'customize/ngx-datatable';
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

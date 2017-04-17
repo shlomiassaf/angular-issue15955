@@ -1,0 +1,9 @@
+@import "src/global-style/variables/variables";
+
+md-toolbar {
+  background-color: mat-color($cisco-blue, 500) !important;
+}
+
+.demo-group-container {
+  padding: 20px;
+}

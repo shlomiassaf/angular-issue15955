@@ -1,0 +1,24 @@
+$vts-font-family-regular: 'CiscoSans Regular', 'Helvetica Neue', sans-serif !default;
+$vts-font-family-light: 'CiscoSans Light', 'Helvetica Neue', sans-serif !default;
+$vts-font-family-thin: 'CiscoSans Thin', 'Helvetica Neue', sans-serif !default;
+$vts-font-family-bold: 'CiscoSans Bold', 'Helvetica Neue', sans-serif !default;
+$vts-font-family-extra-light: 'CiscoSans Extra Light', 'Helvetica Neue', sans-serif !default;
+
+@import 'src/global-style/variables/theme_pre';
+
+@import '~@angular/material/theming';
+
+@import 'src/global-style/variables/theme_post';
+
+$theme:  map-merge(mat-light-theme($primary, $accent, $warn), (
+  foreground: $vts-light-theme-foreground,
+  background: $vts-light-theme-background
+));
+
+$alt-theme: map-merge(mat-light-theme($alt-primary, $alt-accent, $alt-warn), (
+  foreground: $vts-light-theme-foreground,
+  background: $vts-light-theme-background
+));
+
+@import 'src/global-style/variables/material-restyle/material-restyle';
+

@@ -1,0 +1,10 @@
+<div class="vts-dialog-container">
+  <h2 class="vts-dialog-title">{{title}}</h2>
+  <a *ngIf="showClose" class="vts-dialog-close" (click)="dialogRef.close()"><i class="fi-close"></i></a>
+  <ng-content></ng-content>
+  <div class="vts-dialog-button-row">
+    <button md-button *ngFor="let btn of buttons"
+            [ngClass]="btn.cssClass" [color]="btn.color || 'primary'"
+            (click)="onButtonClick(btn)">{{btn.text}}</button>
+  </div>
+</div>

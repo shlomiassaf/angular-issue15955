@@ -1,0 +1,40 @@
+@import "src/global-style/variables/variables";
+
+$primary: map-get($theme, primary);
+$foreground: map-get($theme, foreground);
+
+$vts-dialog-container-padding-vertical: 30px !default;
+$vts-dialog-container-padding-horizontal: 50px !default;
+
+.vts-dialog-container {
+  position: relative;
+  margin: -24px;
+  padding: $vts-dialog-container-padding-vertical $vts-dialog-container-padding-horizontal;
+}
+
+.vts-dialog-title {
+  font-size: 24px;
+  margin: 0 0 $vts-dialog-container-padding-vertical 0;
+  font-family: $vts-font-family-thin;
+  color: mat-color($foreground, header);
+}
+
+.vts-dialog-close {
+  position: absolute;
+  cursor: pointer;
+  color: mat-color($cisco-grey, 600);
+  font-size: 24px;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.vts-dialog-button-row {
+  margin-top: $vts-dialog-container-padding-vertical - 10;
+  text-align: center;
+}
+
+.vts-dialog-button-row > * {
+  margin-left: 5px;
+  margin-right: 5px;
+}

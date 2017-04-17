@@ -1,0 +1,289 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Components Testing Page</h1>
+    </div>
+  </div>
+  <div class="row">
+
+    <vts-demo-group-container [columns]="3" title="Slide Toggle">
+      <md-slide-toggle id="md-slide-toggle-1" color="primary">Test Switch</md-slide-toggle>
+      <br>
+      <md-slide-toggle id="md-slide-toggle-2" color="primary" disabled>Disabled Switch</md-slide-toggle>
+    </vts-demo-group-container>
+
+
+    <vts-demo-group-container [columns]="3" title="Input">
+      <vts-md-input-container-demo></vts-md-input-container-demo>
+    </vts-demo-group-container>
+
+
+    <vts-demo-group-container [columns]="3" title="Dialog">
+      <button md-button color="primary" id="dialog_e2e" (click)="open()">Dialog</button>
+      <br><br>
+      <button md-button color="accent" id="dialog_timeout_e2e" (click)="openTimeout()">Timeout Dialog</button>
+    </vts-demo-group-container>
+
+
+    <vts-demo-group-container [columns]="3" title="Checkbox">
+      <md-checkbox color="primary">Checkbox</md-checkbox>
+      <md-checkbox disabled [checked]="true">Disabled Checked</md-checkbox>
+      <md-checkbox id="md_checkbox_disabled_e2e" disabled [checked]="false">Disabled Unchecked</md-checkbox>
+    </vts-demo-group-container>
+
+
+    <vts-demo-group-container [columns]="7" title="Buttons">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-3">Primary</div>
+            <div class="col-sm-3">Accent</div>
+            <div class="col-sm-3">Warn</div>
+            <div class="col-sm-3">Disabled</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Page</div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-3">
+              <button md-button color="primary" id="button_primary_e2e">Button</button>
+            </div>
+            <div class="col-sm-3">
+              <button md-button color="accent">Button</button>
+            </div>
+            <div class="col-sm-3">
+              <button md-button color="warn">Button</button>
+            </div>
+            <div class="col-sm-3">
+              <button md-button color="primary" id="button_primary_disabled_e2e" disabled>Disabled</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Page Alternative</div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-3">
+              <button md-button class="vts-alt-color" id="alt_button_primary_e2e" color="primary">Button</button>
+            </div>
+            <div class="col-sm-3">
+              <button md-button class="vts-alt-color" color="accent">Button</button>
+            </div>
+            <div class="col-sm-3">
+              <button md-button class="vts-alt-color" color="warn">Button</button>
+            </div>
+            <div class="col-sm-3">
+              <button md-button class="vts-alt-color" color="primary" disabled>Disabled</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Toolbar</div>
+        <div class="col-sm-10">
+          <md-toolbar>
+            <div class="row">
+              <div class="col-sm-3">
+                <button md-button color="primary">Button</button>
+              </div>
+              <div class="col-sm-3">
+                <button md-button color="accent">Button</button>
+              </div>
+              <div class="col-sm-3">
+                <button md-button color="warn">Button</button>
+              </div>
+              <div class="col-sm-3">
+                <button md-button color="primary" disabled>Disabled</button>
+              </div>
+            </div>
+          </md-toolbar>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Toolbar Alternative</div>
+        <div class="col-sm-10">
+          <md-toolbar>
+            <div class="row">
+              <div class="col-sm-3">
+                <button md-button class="vts-alt-color" color="primary">Button</button>
+              </div>
+              <div class="col-sm-3">
+                <button md-button class="vts-alt-color" color="accent">Button</button>
+              </div>
+              <div class="col-sm-3">
+                <button md-button class="vts-alt-color" color="warn">Button</button>
+              </div>
+              <div class="col-sm-3">
+                <button md-button class="vts-alt-color" color="primary" disabled>Disabled</button>
+              </div>
+            </div>
+          </md-toolbar>
+        </div>
+      </div>
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="5" title="Buttons - Fab">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-3">Primary</div>
+            <div class="col-sm-3">Accent</div>
+            <div class="col-sm-3">Warn</div>
+            <div class="col-sm-3">Disabled</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Page</div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-3">
+              <button color="primary" md-mini-fab><md-icon class="fi-plus"></md-icon></button>
+            </div>
+            <div class="col-sm-3">
+              <button color="accent" md-mini-fab><md-icon class="fi-edit"></md-icon></button>
+            </div>
+            <div class="col-sm-3">
+              <button color="warn" md-mini-fab><md-icon class="fi-close"></md-icon></button>
+            </div>
+            <div class="col-sm-3">
+              <button color="primary" md-mini-fab disabled><md-icon class="fi-plus"></md-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Page Alt</div>
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-3">
+              <button class="vts-alt-color" color="primary" md-mini-fab><md-icon class="fi-refresh"></md-icon></button>
+            </div>
+            <div class="col-sm-3">
+              <button class="vts-alt-color" color="accent" md-mini-fab><md-icon class="fi-edit"></md-icon></button>
+            </div>
+            <div class="col-sm-3">
+              <button class="vts-alt-color" color="warn" md-mini-fab><md-icon class="fi-minor"></md-icon></button>
+            </div>
+            <div class="col-sm-3">
+              <button class="vts-alt-color" color="primary" md-mini-fab disabled><md-icon class="fi-refresh"></md-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </vts-demo-group-container>
+
+
+    <vts-demo-group-container [columns]="8" title="Tabs">
+      <md-tab-group>
+        <md-tab label="One">
+          <h1>Some tab content</h1>
+          <p>...</p>
+        </md-tab>
+        <md-tab label="Two">
+          <h1>Some more tab content</h1>
+          <p>...</p>
+        </md-tab>
+      </md-tab-group>
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="4" title="Select">
+      <md-select placeholder="Select an option">
+        <md-option [value]="1">Option 1</md-option>
+        <md-option [value]="2">Option 2</md-option>
+        <md-option [value]="3">Option 3</md-option>
+      </md-select>
+    </vts-demo-group-container>
+
+
+    <vts-demo-group-container [columns]="3" title="Text Area">
+      <md-input-container class="vts-textarea" id="textarea-0-e2e">
+        <textarea mdInput placeholder="Enter text here..."></textarea>
+      </md-input-container>
+      <br>
+      <md-input-container class="vts-textarea" id="textarea-1-e2e">
+        <textarea mdInput placeholder="Disabled" disabled></textarea>
+      </md-input-container>
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="4" title="Radio Button">
+      <p class="mg-top-0">Radio Group 1</p>
+      <md-radio-group>
+        <md-radio-button value="1">Radio Button 1</md-radio-button>
+        <md-radio-button value="2">Radio Button 2</md-radio-button>
+        <md-radio-button value="3" disabled="true">Radio Button 3 (Disabled)</md-radio-button>
+      </md-radio-group>
+      <p class="mg-top-0">Radio Group 2</p>
+      <md-radio-group>
+        <md-radio-button value="1" disabled="true" checked="true">1 (Selected and Disabled)</md-radio-button>
+        <md-radio-button value="2">2</md-radio-button>
+      </md-radio-group>
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="5" title="Slider">
+      <md-slider id="slider_default_e2e" #slider1 value="22"></md-slider>
+      <span>{{slider1.value}} - Default</span>
+      <br>
+      <md-slider id="slider_default_ticks_e2e" #slider2 min="0" max="25" step="5" tick-interval="1"
+                 value="10"></md-slider>
+      <span>{{slider2.value}} - Ticks (on hover)</span>
+      <br>
+      <md-slider #slider3 disabled></md-slider>
+      <span>{{slider3.value}} - Disabled</span>
+      <br>
+      <md-slider #slider4 value="57" disabled></md-slider>
+      <span>{{slider4.value}} - Disabled (value set)</span>
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="3" title="Tooltip">
+      <button id="tooltip-btn-e2e" md-button color="primary"
+              [mdTooltip]="'This is the message.'" [mdTooltipPosition]="'below'">Test Tooltip
+      </button>
+      <br><br>
+      <button md-button color="accent"
+              [mdTooltip]="'Lorem ipsum dolor sit adipiscing elite adipiscing elit. Pellentesque eu lectus Duis id odio eget purus pretium.'"
+              [mdTooltipPosition]="'after'">Multi-line (to the right)
+      </button>
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="6" title="Stepper">
+
+    </vts-demo-group-container>
+
+    <vts-demo-group-container [columns]="12" title="Datatable">
+      <ngx-datatable
+        class="material"
+        [rows]="rows"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [limit]="5"
+        [selectionType]="'checkbox'">
+        <ngx-datatable-column
+          [width]="30"
+          [sortable]="false"
+          [canAutoResize]="false"
+          [draggable]="false"
+          [resizeable]="false"
+          [headerCheckboxable]="true"
+          [checkboxable]="true">
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Name"></ngx-datatable-column>
+        <ngx-datatable-column name="Gender"></ngx-datatable-column>
+        <ngx-datatable-column name="Company"></ngx-datatable-column>
+      </ngx-datatable>
+    </vts-demo-group-container>
+  </div>
+
+</div>

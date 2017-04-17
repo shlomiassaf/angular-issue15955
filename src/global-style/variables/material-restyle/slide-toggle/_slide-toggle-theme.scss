@@ -1,0 +1,11 @@
+$background: map-get($theme, background);
+
+@mixin _mat-slide-toggle-checked($palette, $thumb-checked-hue) {
+  &.mat-checked {
+
+    .mat-slide-toggle-bar {
+      background-color: mat-color($palette);
+    }
+  }
+}
+

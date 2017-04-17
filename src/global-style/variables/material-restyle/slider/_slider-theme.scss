@@ -1,0 +1,39 @@
+@mixin mat-slider-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  // TODO(iveysaur): Find an implementation to hide the track under a disabled thumb.
+  $mat-slider-off-color: mat-color($cisco-grey, 400);
+
+  .mat-slider-wrapper {
+    background-color: $mat-slider-off-color;
+
+    .mat-slider-disabled & {
+      background-color: mat-color($cisco-grey, 100);
+    }
+  }
+
+  .mat-slider-track-fill {
+    background-color: mat-color($primary);
+
+    .mat-slider-disabled & {
+      background-color: mat-color($cisco-grey, 400);
+    }
+  }
+
+  .mat-slider-thumb {
+    background-color: white;
+    border: solid mat-color($cisco-grey, 400);
+
+    .mat-slider-disabled & {
+      background-color: mat-color($cisco-grey, 100);
+    }
+  }
+
+  .mat-slider-thumb-label {
+    background-color: mat-color($primary);
+  }
+
+  .mat-slider-thumb-label-text {
+    color: mat-color($primary, default-contrast);
+  }
+}

@@ -1,0 +1,20 @@
+<md-input-container id="input-1-e2e">
+  <input mdInput placeholder="Testing..." />
+</md-input-container>
+
+<md-input-container id="input-2-e2e">
+  <input mdInput placeholder="Disabled..." disabled />
+</md-input-container>
+
+<md-input-container align="end" id="input-3-e2e">
+  <input mdInput type="number" placeholder="Amount" />
+  <span mdPrefix>$&nbsp;</span>
+  <span mdSuffix>.00</span>
+</md-input-container>
+
+<md-input-container>
+  <input mdInput placeholder="Search" #input id="input-4-e2e" />
+  <span mdSuffix>
+      <input mdInput (click)="input.value && open(input.value)" />
+    </span>
+</md-input-container>
